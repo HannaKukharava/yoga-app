@@ -1,0 +1,6 @@
+# Ignore artifacts:
+.angular
+.husky
+.vscode
+dist
+node_modules
