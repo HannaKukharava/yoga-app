@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'yoga-app' title`, () => {
+  it(`should have the 'Yoga Web App' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('yoga-app');
+    expect(app.title).toEqual('Yoga Web App');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, yoga-app');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Welcome to the Yoga Web App');
   });
 });
