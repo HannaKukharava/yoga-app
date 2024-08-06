@@ -1,0 +1,20 @@
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#" class="nav__logo">Yoga</a>
+
+    <div class="nav__menu" id="nav-menu" [ngClass]="{ collapsed: collapsed() }">
+      <ul class="nav__list">
+        @for (item of menuItems; track item.title) {
+          <li class="nav__item">
+            <a class="nav__link" [routerLink]="item.path" [fragment]="item.fragment" (click)="closeMenu()">{{
+              item.title
+            }}</a>
+          </li>
+        }
+      </ul>
+      <div class="nav__close" id="nav-close" (click)="toggleMenu()"><i class="ri-close-line"></i></div>
+    </div>
+
+    <div class="nav__toggle" id="nav-toggle" (click)="toggleMenu()"><i class="ri-apps-2-line"></i></div>
+  </nav>
+</header>
