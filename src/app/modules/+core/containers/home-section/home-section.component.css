@@ -1,0 +1,74 @@
+.home__container {
+  row-gap: 2rem;
+  padding-top: 1rem;
+}
+
+.home__data {
+  text-align: center;
+}
+
+.home__title {
+  font-size: var(--biggest-font-size);
+  font-family: var(--second-font);
+  font-weight: var(--font-medium);
+  line-height: 135%;
+  position: relative;
+  max-width: max-content;
+  margin: 0 auto 1.25rem;
+}
+
+/* to emphasize some text inside */
+.home__title-box {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.75rem;
+}
+
+/* add a gradient background to text*/
+.home__title-box div {
+  background: var(--gradient-color);
+  border-radius: 0.5rem;
+  color: var(--white-color);
+  padding: 0.25rem 0.75rem;
+  transform: rotate(10deg);
+}
+
+.home__title img {
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+  width: 50px;
+}
+
+.home__description {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.home__description img {
+  position: absolute;
+  width: 16px;
+  right: 4rem;
+  bottom: -1rem;
+}
+
+.home__box {
+  display: flex;
+  column-gap: 3rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.home__box h3 {
+  font-size: var(--big-font-size);
+  font-family: var(--second-font);
+}
+
+.home__box span {
+  font-size: var(--small-font-size);
+}
+
+.home__img {
+  width: 320px;
+  justify-self: center;
+}
