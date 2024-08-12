@@ -154,6 +154,14 @@ img {
   color: var(--white-color);
 }
 
+.button.button--secondary,
+.button.button--secondary i {
+  background: var(--gradient-color);
+  color: transparent;
+  background-clip: text;
+  --webkit-background-clip: text;
+}
+
 .button i.ri-arrow-right-line {
   font-size: 1.5rem;
   transition: transform 0.3s;
