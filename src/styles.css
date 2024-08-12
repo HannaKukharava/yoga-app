@@ -140,6 +140,28 @@ img {
 }
 
 /*=============== BUTTON ===============*/
+.button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  padding: 1rem 1.8rem;
+  border-radius: 4rem;
+  font-weight: var(--font-medium);
+}
+
+.button.button--primary {
+  background: var(--gradient-color);
+  color: var(--white-color);
+}
+
+.button i.ri-arrow-right-line {
+  font-size: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.button:hover i.ri-arrow-right-line {
+  transform: translateX(0.25rem);
+}
 
 /*=============== LIST ===============*/
 
