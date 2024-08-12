@@ -162,6 +162,15 @@ img {
   --webkit-background-clip: text;
 }
 
+.button.button--circle {
+  flex-direction: column;
+  row-gap: 0.5rem;
+  border-radius: 50%;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 2rem;
+}
+
 .button i.ri-arrow-right-line {
   font-size: 1.5rem;
   transition: transform 0.3s;
