@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { menuItems } from '../../../../utils/nav-menu-utils';
@@ -14,6 +14,14 @@ export class HeaderComponent {
   collapsed = signal(true);
 
   protected readonly menuItems = menuItems;
+
+  isScrolled = false;
+
+  @HostListener('window:scroll')
+  onWindowScroll() {
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    this.isScrolled = scrollPosition > 50;
+  }
 
   toggleMenu(): void {
     this.collapsed.update(val => !val);
