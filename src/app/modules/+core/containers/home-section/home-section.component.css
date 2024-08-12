@@ -7,7 +7,7 @@
   text-align: center;
 }
 
-.home__title {
+.section__title {
   font-size: var(--biggest-font-size);
   font-family: var(--second-font);
   font-weight: var(--font-medium);
@@ -33,7 +33,7 @@
   transform: rotate(10deg);
 }
 
-.home__title img {
+.section__title img {
   position: absolute;
   bottom: 1rem;
   left: -1rem;
