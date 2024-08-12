@@ -4,6 +4,7 @@ import { ListSectionComponent } from '../../containers/list-section/list-section
 import { HealthSectionComponent } from '../../containers/health-section/health-section.component';
 import { RoutineSectionComponent } from '../../containers/routine-section/routine-section.component';
 import { FollowSectionComponent } from '../../containers/follow-section/follow-section.component';
+import { JoinSectionComponent } from '../../containers/join-section/join-section.component';
 
 @Component({
   selector: 'app-home-page',
@@ -14,6 +15,7 @@ import { FollowSectionComponent } from '../../containers/follow-section/follow-s
     HealthSectionComponent,
     RoutineSectionComponent,
     FollowSectionComponent,
+    JoinSectionComponent,
   ],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.css',

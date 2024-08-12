@@ -1,0 +1,25 @@
+.join__input,
+.button {
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+.join__input {
+  padding: 1.5rem;
+  border-radius: 3rem;
+  margin-bottom: 0.75rem;
+  color: var(--title-color);
+  font-size: var(--small-font-size);
+}
+
+.join__input::placeholder {
+  color: var(--text-color-light);
+}
+
+.button {
+  justify-content: center;
+  box-shadow: 0 4px 12px hsla(260, 100%, 52%, 0.3);
+  padding-block: 1.25rem;
+  cursor: pointer;
+}
