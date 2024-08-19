@@ -84,3 +84,10 @@
   top: 1.5rem;
   right: 1.5rem;
 }
+
+.nav__link.active {
+  background: var(--gradient-color);
+  background-clip: text;
+  --webkit-background-clip: text;
+  color: transparent;
+}

@@ -1,27 +1,24 @@
-import { Component, HostListener, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject, signal } from '@angular/core';
+import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { menuItems } from '../../../../utils/nav-menu-utils';
+import { OnScrollDirective } from '../../directives/on-scroll.directive';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterLink, NgClass],
+  imports: [RouterLink, NgClass, OnScrollDirective, RouterLinkActive],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
 })
 export class HeaderComponent {
+  route: ActivatedRoute = inject(ActivatedRoute);
   collapsed = signal(true);
+  activeLink = toSignal(this.route.fragment.pipe(map(item => item ?? 'home')));
 
   protected readonly menuItems = menuItems;
-
-  isScrolled = false;
-
-  @HostListener('window:scroll')
-  onWindowScroll() {
-    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
-    this.isScrolled = scrollPosition > 50;
-  }
 
   toggleMenu(): void {
     this.collapsed.update(val => !val);

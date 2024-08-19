@@ -1,4 +1,4 @@
-<header class="header" [ngClass]="{ 'blur-header': isScrolled }">
+<header class="header" appOnScroll className="blur-header" [scrollThreshold]="50">
   <nav class="nav container">
     <a href="#" class="nav__logo">Yoga</a>
 
@@ -6,9 +6,14 @@
       <ul class="nav__list">
         @for (item of menuItems; track item.title) {
           <li class="nav__item">
-            <a class="nav__link" [routerLink]="item.path" [fragment]="item.fragment" (click)="closeMenu()">{{
-              item.title
-            }}</a>
+            <a
+              class="nav__link"
+              [ngClass]="{ active: activeLink() === item.fragment }"
+              [routerLink]="item.path"
+              [fragment]="item.fragment"
+              (click)="closeMenu()"
+              >{{ item.title }}</a
+            >
           </li>
         }
       </ul>
