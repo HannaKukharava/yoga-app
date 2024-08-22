@@ -29,11 +29,13 @@
   z-index: 1;
   top: 0;
   left: 0;
+  transition: border 0.4s; /* for dark mode animation */
 }
 
 .routine__img-2 {
   right: 0;
   bottom: 0;
+  transition: border 0.4s; /* for dark mode animation */
 }
 
 .routine__box-1,
@@ -47,6 +49,7 @@
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
+  transition: background 0.4s; /* for dark mode animation */
 }
 
 .routine__box-1 {

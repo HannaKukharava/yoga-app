@@ -27,6 +27,7 @@
   border-radius: 12.5rem;
   justify-content: center;
   align-items: center;
+  transition: background 0.4s; /* for dark mode animation */
 }
 
 .list__blob img {

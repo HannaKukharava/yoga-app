@@ -81,6 +81,7 @@ button {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
+  transition: background 0.4s; /* for dark mode animation */
 }
 
 h1,
@@ -108,10 +109,49 @@ img {
 
 /*========== Variables Dark theme ==========*/
 
+body:has(.wrapper.dark-theme) {
+  --title-color: hsl(260, 64%, 85%);
+  --text-color: hsl(260, 20%, 65%);
+  --body-color: hsl(260, 64%, 10%);
+  --container-color: hsl(260, 32%, 24%);
+}
+
 /*==========
 	Color changes in some parts of
 	the website, in dark theme
 ==========*/
+.wrapper.dark-theme .blur-header::after,
+.wrapper.dark-theme .nav__menu {
+  background-color: hsla(0, 0%, 10%, 0.3);
+}
+
+.wrapper.dark-theme .list__blob {
+  background-color: var(--container-color);
+}
+
+.wrapper.dark-theme :is(.follow__content-1, .follow__content-2) img {
+  border: 5px solid var(--container-color) !important;
+}
+
+.wrapper.dark-theme .join__input {
+  color: hsl(260, 80%, 18%);
+}
+
+.wrapper.dark-theme footer {
+  background-color: var(--body-color);
+}
+
+:has(.wrapper.dark-theme)::-webkit-scrollbar {
+  background-color: hsl(260, 32%, 15%);
+}
+
+:has(.wrapper.dark-theme)::-webkit-scrollbar-thumb {
+  background-color: hsl(260, 16%, 25%);
+}
+
+:has(.wrapper.dark-theme)::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(260, 16%, 35%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -140,6 +180,12 @@ img {
 }
 
 /*=============== BUTTON ===============*/
+.buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 1.25rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -181,14 +227,22 @@ img {
 }
 
 /*=============== SCROLL BAR ===============*/
-&::-webkit-scrollbar {
+&::-webkit-scrollbar,
+:has(.wrapper.dark-theme)::-webkit-scrollbar {
   width: 0.6rem;
   border-radius: 0.5rem;
+}
+
+&::-webkit-scrollbar-thumb,
+:has(.wrapper.dark-theme)::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+}
+
+&::-webkit-scrollbar {
   background-color: hsl(260, 16%, 75%);
 }
 
 &::-webkit-scrollbar-thumb {
-  border-radius: 0.5rem;
   background-color: hsl(260, 16%, 65%);
 }
 

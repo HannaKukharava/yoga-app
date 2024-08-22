@@ -19,7 +19,12 @@
       </ul>
       <div class="nav__close" id="nav-close" (click)="toggleMenu()"><i class="ri-close-line"></i></div>
     </div>
-
-    <div class="nav__toggle" id="nav-toggle" (click)="toggleMenu()"><i class="ri-apps-2-line"></i></div>
+    <div class="nav__buttons buttons">
+      <!-- TODO: change buttons -->
+      <div class="nav__change-theme" (click)="themeChanged.emit()">
+        <i [ngClass]="lightMode() ? 'ri-moon-line' : 'ri-sun-line'"></i>
+      </div>
+      <div class="nav__toggle" id="nav-toggle" (click)="toggleMenu()"><i class="ri-apps-2-line"></i></div>
+    </div>
   </nav>
 </header>

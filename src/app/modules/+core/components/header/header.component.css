@@ -5,6 +5,7 @@
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+  transition: background 0.4s; /* for dark mode animation */
 }
 
 .blur-header {
@@ -42,7 +43,8 @@
 }
 
 .nav__close,
-.nav__toggle {
+.nav__toggle,
+.nav__change-theme {
   display: flex;
   font-size: 1.5rem;
   color: var(--title-color);

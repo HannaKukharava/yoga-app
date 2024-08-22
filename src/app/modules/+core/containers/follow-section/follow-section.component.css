@@ -19,6 +19,7 @@
 .follow__content-2 img {
   border-radius: 12.5rem;
   border: 5px solid var(--first-color-light);
+  transition: border 0.4s; /* for dark mode animation */
 }
 
 .follow__content-1 {

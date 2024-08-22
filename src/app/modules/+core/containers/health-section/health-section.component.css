@@ -29,6 +29,7 @@
   align-items: center;
   column-gap: 0.5rem;
   position: absolute;
+  transition: background 0.4s; /* for dark mode animation */
 }
 
 .health__icon {

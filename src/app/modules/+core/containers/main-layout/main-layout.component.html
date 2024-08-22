@@ -1,5 +1,5 @@
-<div class="wrapper">
-  <app-header></app-header>
+<div class="wrapper" [ngClass]="{ 'dark-theme': !store.hasLightMode() }">
+  <app-header [lightMode]="store.hasLightMode()" (themeChanged)="store.toggleTheme()"></app-header>
   <router-outlet />
   <app-footer></app-footer>
   <a href="#" class="scroll-up" appOnScroll className="show-scroll-up" [scrollThreshold]="350"
