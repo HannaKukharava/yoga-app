@@ -63,3 +63,23 @@
   width: 150px;
   left: -0.8rem; /* todo -2.8rem*/
 }
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 345px) {
+  .list__content {
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+}
+
+/* For medium devices */
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .list__data {
+    grid-template-columns: 300px max-content;
+    column-gap: 2rem;
+    text-align: initial;
+  }
+}

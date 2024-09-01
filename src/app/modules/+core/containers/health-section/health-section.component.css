@@ -68,3 +68,11 @@
   right: 0.5rem;
   bottom: 2rem;
 }
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .health__data {
+    text-align: initial;
+    order: 1;
+  }
+}

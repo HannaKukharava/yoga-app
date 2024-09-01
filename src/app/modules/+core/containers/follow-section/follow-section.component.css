@@ -58,3 +58,45 @@
 .follow__img-4 {
   transform: translateX(2.5rem) rotate(-15deg);
 }
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 345px) {
+  .follow__img-3 {
+    transform: translateX(0) rotate(15deg);
+  }
+
+  .follow__img-4 {
+    transform: translateX(0) rotate(-15deg);
+  }
+}
+
+/* For medium devices */
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .follow__content-1 {
+    grid-template-columns: max-content 200px max-content;
+  }
+
+  .follow__data {
+    grid-column: initial;
+    order: 2;
+    margin-top: 3rem;
+  }
+
+  .follow__img-2 {
+    order: 3;
+    margin: 0;
+  }
+
+  .follow__title {
+    text-align: center;
+  }
+
+  .follow__content-2 {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */

@@ -252,9 +252,58 @@ body:has(.wrapper.dark-theme) {
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 345px) {
+  .container {
+    margin-inline: 1rem;
+  }
+}
 
 /* For medium devices */
 
+@media screen and (min-width: 576px) {
+  .container:not(.footer__container) {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .wrapper.dark-theme .nav__menu {
+    background-color: transparent;
+  }
+
+  .join__container {
+    grid-template-columns: 600px;
+  }
+
+  .join__content {
+    padding-inline: 3rem;
+  }
+
+  .join__form {
+    display: flex;
+    column-gap: 1rem;
+    background-color: var(--white-color);
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    border-radius: 4rem;
+  }
+
+  .join__input {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 /* For large devices */
+@media screen and (min-width: 1024px) {
+  .wrapper .section__title {
+    text-align: initial;
+  }
+
+  .container:not(.footer__container, .follow__container) {
+    grid-template-columns: repeat(2, 400px);
+    align-items: center;
+  }
+}
 
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */

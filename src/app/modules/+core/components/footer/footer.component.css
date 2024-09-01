@@ -67,3 +67,15 @@
 .footer__copy {
   font-size: var(--smaller-font-size);
 }
+
+/* For medium devices */
+@media screen and (min-width: 767px) {
+  .footer__content {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+  }
+
+  .footer__data {
+    grid-template-columns: repeat(3, max-content);
+  }
+}

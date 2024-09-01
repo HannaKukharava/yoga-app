@@ -79,3 +79,22 @@
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
 }
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 345px) {
+  .routine__images {
+    width: 250px;
+  }
+}
+
+/* For medium devices */
+
+/* For large devices */
+@media screen and (min-width: 1024px) {
+  .routine__data {
+    text-align: initial;
+  }
+}
+
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */
