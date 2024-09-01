@@ -79,3 +79,36 @@
     grid-template-columns: repeat(3, max-content);
   }
 }
+
+/* For large devices */
+@media screen and (min-width: 1152px) {
+  .footer {
+    padding-block: 5rem 3rem;
+  }
+
+  .footer__container {
+    row-gap: 3rem;
+  }
+
+  .footer__content {
+    padding-bottom: 3rem;
+  }
+
+  .footer__data {
+    column-gap: 4.5rem;
+  }
+
+  .footer__logo,
+  .footer__title {
+    margin-bottom: 2.5rem;
+  }
+
+  .footer__group {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__social {
+    column-gap: 2.5rem;
+  }
+}

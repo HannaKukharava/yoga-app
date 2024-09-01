@@ -83,3 +83,37 @@
     text-align: initial;
   }
 }
+
+@media screen and (min-width: 1152px) {
+  .list__container {
+    grid-template-columns: 540px 520px;
+    column-gap: 4rem;
+    padding-top: 2rem;
+  }
+
+  .list__content {
+    column-gap: 2rem;
+  }
+
+  .list__blob {
+    width: 400px;
+    height: 180px;
+  }
+
+  .list__blob img {
+    width: 350px;
+    transform: translateY(-2rem);
+  }
+
+  .list__data {
+    grid-template-columns: 340px max-content;
+    column-gap: 3rem;
+  }
+
+  .list__description img {
+    width: 64px;
+    top: -2.5rem;
+    left: -1rem;
+  }
+}
+/* For 2K resolutions (2048 x 1152, 2048 x 1536) */

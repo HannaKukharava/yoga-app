@@ -7,7 +7,7 @@
 }
 
 .routine__description {
-  margin: 2rem;
+  margin-bottom: 2rem;
 }
 
 .routine__images {
@@ -94,6 +94,41 @@
 @media screen and (min-width: 1024px) {
   .routine__data {
     text-align: initial;
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .routine__container {
+    grid-template-columns: 470px 580px;
+    column-gap: 4rem;
+  }
+
+  .routine__images {
+    width: 580px;
+    height: 575px;
+  }
+
+  .routine__img-1,
+  .routine__img-2 {
+    width: 500px;
+  }
+
+  .routine__img-1 {
+    border: 10px solid var(--body-color);
+  }
+
+  .routine__icon {
+    font-size: 2rem; /*common for icons*/
+  }
+
+  .routine__box-1 {
+    top: 6rem;
+    right: 2rem;
+  }
+
+  .routine__box-2 {
+    left: 3rem;
+    bottom: 3.5rem;
   }
 }
 

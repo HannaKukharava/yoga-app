@@ -76,3 +76,29 @@
     order: 1;
   }
 }
+
+@media screen and (min-width: 1152px) {
+  .health__container {
+    grid-template-columns: 500px 580px;
+    column-gap: 2rem;
+  }
+
+  .health__img {
+    width: 500px;
+  }
+
+  .health__icon {
+    padding: 9px;
+    font-size: 2rem;
+  }
+
+  .health__title,
+  .health__number {
+    font-size: var(--normal-font-size);
+  }
+
+  .health__course {
+    right: 2rem;
+    bottom: 3rem;
+  }
+}

@@ -48,7 +48,7 @@
 /*========== Responsive typography ==========*/
 @media screen and (min-width: 1152px) {
   :root {
-    --biggest-font-size: 6rem;
+    --biggest-font-size: 5rem;
     --bigger-font-size: 4rem;
     --big-font-size: 3.5rem;
     --h1-font-size: 2.25rem;
@@ -271,38 +271,32 @@ body:has(.wrapper.dark-theme) {
   .wrapper.dark-theme .nav__menu {
     background-color: transparent;
   }
-
-  .join__container {
-    grid-template-columns: 600px;
-  }
-
-  .join__content {
-    padding-inline: 3rem;
-  }
-
-  .join__form {
-    display: flex;
-    column-gap: 1rem;
-    background-color: var(--white-color);
-    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-    border-radius: 4rem;
-  }
-
-  .join__input {
-    padding: 0;
-    margin: 0;
-  }
 }
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
-  .wrapper .section__title {
+  /*fix*/
+  .wrapper .section__title:not(.follow__title, .join__title) {
     text-align: initial;
   }
 
-  .container:not(.footer__container, .follow__container) {
+  .container:not(.join__container, .follow__container, .footer__container) {
     grid-template-columns: repeat(2, 400px);
     align-items: center;
+  }
+}
+
+@media screen and (min-width: 1152px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block: 7rem 1.5rem;
+  }
+
+  .section__title {
+    margin-bottom: 2.5rem;
   }
 }
 

@@ -99,4 +99,29 @@
   }
 }
 
+@media screen and (min-width: 1152px) {
+  .follow__content-1 {
+    grid-template-columns: max-content 400px max-content;
+    column-gap: 3.5rem;
+  }
+  .follow__content-1 img,
+  .follow__content-2 img {
+    border: 10px solid var(--first-color-light);
+  }
+
+  .follow__img-1,
+  .follow__img-2 {
+    width: 280px;
+  }
+
+  .follow__img-3,
+  .follow__img-4 {
+    width: 500px;
+  }
+
+  .follow__data {
+    margin-top: 5rem;
+  }
+}
+
 /* For 2K resolutions (2048 x 1152, 2048 x 1536) */
