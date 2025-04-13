@@ -71,6 +71,10 @@
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
+  .health__container {
+    grid-template-columns: 400px 540px;
+  }
+
   .health__data {
     text-align: initial;
     order: 1;

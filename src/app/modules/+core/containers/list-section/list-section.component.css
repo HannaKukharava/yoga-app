@@ -77,6 +77,12 @@
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
+  .list__container {
+    grid-template-columns: 445px 530px;
+    column-gap: 2rem;
+    padding-top: 2rem;
+  }
+
   .list__data {
     grid-template-columns: 300px max-content;
     column-gap: 2rem;
